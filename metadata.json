@@ -1,0 +1,6 @@
+{
+  "name": "Catalogue E-Commerce WhatsApp",
+  "description": "Template React complet pour un catalogue e-commerce statique avec panier persistant et checkout WhatsApp, intégrable comme Island Astro.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

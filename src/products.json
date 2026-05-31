@@ -1,0 +1,93 @@
+{
+  "products": [
+    {
+      "id": "prod_01",
+      "name": "Baskets Performance V3",
+      "price": 45000,
+      "description": "Baskets légères avec amorti réactif et semelle adhérente haute performance.",
+      "category": "Chaussures",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "stock": 5,
+      "status": "active",
+      "createdAt": "2026-05-30T10:00:00Z"
+    },
+    {
+      "id": "prod_02",
+      "name": "Sweat à Capuche Horizon Midnight",
+      "price": 28000,
+      "description": "Sweatshirt en coton biologique brossé super doux, coupe moderne unisexe.",
+      "category": "Vêtements",
+      "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7",
+      "stock": 12,
+      "status": "active",
+      "createdAt": "2026-05-29T11:30:00Z"
+    },
+    {
+      "id": "prod_03",
+      "name": "Écouteurs Sans Fil Aura Sound",
+      "price": 65000,
+      "description": "Réduction de bruit active intelligente, autonomie de 32h et son HD spatial.",
+      "category": "Électronique",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "stock": 8,
+      "status": "active",
+      "createdAt": "2026-05-28T09:15:00Z"
+    },
+    {
+      "id": "prod_04",
+      "name": "Montre Quartz Classic Gold",
+      "price": 85000,
+      "description": "Montre élégante avec boîtier doré brossé et bracelet en cuir véritable noir de première qualité.",
+      "category": "Accessoires",
+      "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314",
+      "stock": 2,
+      "status": "active",
+      "createdAt": "2026-05-27T14:45:00Z"
+    },
+    {
+      "id": "prod_05",
+      "name": "Diffuseur d'Huiles Essentielles Zen",
+      "price": 19500,
+      "description": "Diffuseur ultrasonique silencieux avec éclairage d'ambiance LED chaleureux à 7 couleurs.",
+      "category": "Maison & Déco",
+      "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108",
+      "stock": 15,
+      "status": "active",
+      "createdAt": "2026-05-26T16:00:00Z"
+    },
+    {
+      "id": "prod_06",
+      "name": "T-Shirt Minimalist Noir",
+      "price": 12000,
+      "description": "T-shirt 100% coton peigné haut de gamme, douceur et résistance optimales au lavage.",
+      "category": "Vêtements",
+      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518",
+      "stock": 0,
+      "status": "active",
+      "createdAt": "2026-05-25T11:00:00Z"
+    },
+    {
+      "id": "prod_07",
+      "name": "Sérum Hydratant Éclat Intense",
+      "price": 24000,
+      "description": "Sérum visage réparateur à l'acide hyaluronique pur et extraits botaniques bio.",
+      "category": "Beauté & Santé",
+      "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19",
+      "stock": 9,
+      "status": "active",
+      "createdAt": "2026-05-24T08:30:00Z"
+    },
+    {
+      "id": "prod_08",
+      "name": "Café Arabica d'Origine Sélectionnée",
+      "price": 7500,
+      "description": "Grains de café torréfiés artisanalement avec des notes complexes florales et chocolatées.",
+      "category": "Alimentation",
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
+      "stock": 25,
+      "status": "active",
+      "createdAt": "2026-05-23T14:00:00Z"
+    }
+  ],
+  "lastUpdated": "2026-05-31T15:26:19Z"
+}
