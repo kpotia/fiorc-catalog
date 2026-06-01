@@ -21,7 +21,8 @@ if (!product) {
   throw new Error(`Produit introuvable : ${Astro.params.id}`);
 }
 
-const whatsappHref = buildWhatsAppUrl('22890000000', [
+const whatsappPhone = import.meta.env.PUBLIC_WHATSAPP_PHONE || '22899769896';
+const whatsappHref = buildWhatsAppUrl(whatsappPhone, [
   {
     id: product.id,
     name: product.name,

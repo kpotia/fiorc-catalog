@@ -57,7 +57,7 @@ import cartClientScript from './cart-client.ts?url';
             <span>Total estimé</span>
             <span data-cart-total>0 FCFA</span>
           </div>
-          <WhatsAppCheckout phoneNumber="22899769896" />
+          <WhatsAppCheckout phoneNumber={import.meta.env.PUBLIC_WHATSAPP_PHONE || '22899769896'} />
           <button
             type="button"
             data-cart-clear

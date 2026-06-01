@@ -1,6 +1,6 @@
 ---
 import type { Product } from '../types';
-import productCatalogClientScript from './product-catalog-client.ts?url';
+import productCatalogClientScript from './product-catalog-client-wrapper.js?url';
 const { products } = Astro.props as { products: Product[] };
 const initialProducts = JSON.stringify(products);
 const categories: string[] = ['Toutes catégories', ...new Set(products.map((product) => product.category))];

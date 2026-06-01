@@ -13,7 +13,7 @@ import {
 import { buildWhatsAppUrl, formatPrice } from '../utils';
 import type { CartItem } from '../types';
 
-const CART_PHONE = '22890000000';
+const CART_PHONE = import.meta.env.PUBLIC_WHATSAPP_PHONE || '22899769896';
 
 const select = <T extends HTMLElement>(selector: string) => document.querySelector<T>(selector);
 
