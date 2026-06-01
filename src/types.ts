@@ -4,7 +4,7 @@ export interface Product {
   price: number;
   description: string;
   category: string;
-  image: string; // URL Cloudinary ou autre
+  image: string;
   stock: number;
   status: 'active' | 'inactive';
   createdAt: string;
@@ -18,12 +18,6 @@ export interface CartItem {
   quantity: number;
 }
 
-export interface CartContextType {
-  cart: CartItem[];
-  addItem: (product: Omit<CartItem, 'quantity'>) => void;
-  removeItem: (id: string) => void;
-  updateQuantity: (id: string, quantity: number) => void;
-  clearCart: () => void;
-  getTotal: () => number;
-  getItemCount: () => number;
+export interface ProductPageProps {
+  product: Product;
 }

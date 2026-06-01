@@ -1,0 +1,23 @@
+<header class="sticky top-0 z-40 border-b border-white/10 bg-[#1a1a2e]/95 backdrop-blur-md">
+  <div class="mx-auto flex flex-wrap items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-10">
+    <div class="flex items-center gap-3">
+      <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#ffd700] text-[#1a1a2e] font-extrabold text-lg shadow-lg shadow-[#ffd700]/20">
+        W
+      </div>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.28em] text-[#ffd700]">W-Shop</p>
+        <p class="text-xs uppercase tracking-[0.3em] text-gray-400">WhatsApp Commerce</p>
+      </div>
+    </div>
+
+    <nav class="hidden gap-8 text-sm font-medium text-gray-300 md:flex">
+      <a href="#catalogue" class="transition hover:text-[#ffd700]">Produits</a>
+      <a href="#about" class="transition hover:text-[#ffd700]">À propos</a>
+      <a href="/produit/prod_01" class="transition hover:text-[#ffd700]">Produit</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <slot name="cart" />
+    </div>
+  </div>
+</header>

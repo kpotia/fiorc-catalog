@@ -1,0 +1,44 @@
+---
+import type { Product } from '../types';
+import { formatPrice } from '../utils';
+const { product } = Astro.props as { product: Product };
+const isOutOfStock = product.stock <= 0;
+---
+<article class="group overflow-hidden rounded-3xl border border-white/10 bg-[#161a2f] shadow-xl shadow-black/30 transition-all duration-300 hover:border-white/10">
+  <a href={`/produit/${product.id}`} class="block">
+    <div class="relative overflow-hidden bg-slate-950">
+      <img
+        src={product.image}
+        alt={product.name}
+        decoding="async"
+        class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      {isOutOfStock ? (
+        <span class="absolute left-4 top-4 rounded-full bg-red-500/95 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white">
+          Épuisé
+        </span>
+      ) : (
+        <span class="absolute left-4 top-4 rounded-full bg-[#ffd700]/95 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#1a1a1a]">
+          {product.category}
+        </span>
+      )}
+    </div>
+  </a>
+
+  <div class="space-y-4 p-5">
+    <div>
+      <h2 class="text-lg font-semibold text-white">{product.name}</h2>
+      <p class="mt-2 text-sm leading-relaxed text-gray-400">{product.description}</p>
+    </div>
+
+    <div class="flex flex-wrap items-end justify-between gap-3">
+      <span class="text-sm font-bold text-[#ffd700]">{formatPrice(product.price)}</span>
+      <a
+        href={`/produit/${product.id}`}
+        class="rounded-full bg-[#e94560] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-[#ff5a77]"
+      >
+        Voir le produit
+      </a>
+    </div>
+  </div>
+</article>

@@ -1,15 +1,67 @@
 ---
-import App from '../App';
-import '../styles.css';
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ProductCatalog from '../components/ProductCatalog.astro';
+import ProductCardStatic from '../components/ProductCard.astro';
+import CartDrawer from '../components/CartDrawer.astro';
+import CartButton from '../components/CartButton.astro';
+import { fetchActiveProducts } from '../server/products';
+
+const products = await fetchActiveProducts();
+const featuredProduct = products[0] ?? null;
 ---
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boutique WhatsApp & Catalogue Interactif</title>
-  </head>
-  <body>
-    <App client:visible />
-  </body>
-</html>
+<Layout title="W-Shop — Catalogue WhatsApp" description="Conversion Astro d'un template e-commerce avec des îlots React et un panier nanostores.">
+  <Header>
+    <CartButton slot="cart" />
+  </Header>
+
+  <main class="mx-auto max-w-7xl px-6 pb-24 pt-8 sm:px-8">
+    <section class="overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_top_right,_rgba(233,69,96,0.18),_transparent_50%),linear-gradient(180deg,#10101d_0%,#07080f_100%)] border border-white/10 px-6 py-10 shadow-2xl shadow-black/40 sm:px-10">
+      <div class="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+        <div class="space-y-6">
+          <span class="inline-flex rounded-full bg-[#ffd700]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#ffd700]">Astro + React Islands</span>
+          <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">Le meilleur du e-commerce WhatsApp, construit pour la performance.</h1>
+          <p class="max-w-2xl text-base leading-relaxed text-gray-400">
+            Catalogue server-side, îlots interactifs là où c'est indispensable, panier partagé avec nanostores et checkout WhatsApp sans backend complexe.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#catalogue" class="rounded-full bg-[#e94560] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#ff5a77]">Voir le catalogue</a>
+            <a href="/produit/prod_01" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-[#ffd700]">Explorer un produit</a>
+          </div>
+        </div>
+
+        {featuredProduct && (
+          <div class="rounded-[2rem] border border-white/10 bg-[#0b0d18] p-6 shadow-2xl shadow-black/40">
+            <h2 class="mb-6 text-sm uppercase tracking-[0.3em] text-[#ffd700]">Produit mis en avant</h2>
+            <ProductCardStatic product={featuredProduct} />
+          </div>
+        )}
+      </div>
+    </section>
+
+    <ProductCatalog products={products} />
+
+    <section id="about" class="mt-12 rounded-[2rem] border border-white/10 bg-[#11131f]/95 p-8 shadow-2xl shadow-black/40">
+      <div class="grid gap-10 lg:grid-cols-3">
+        <div class="space-y-4">
+          <h2 class="text-xl font-semibold text-white">Pourquoi Astro ?</h2>
+          <p class="text-sm leading-relaxed text-gray-400">
+            Le contenu social et marketing reste 100% statique initialement, et les îlots se chargent uniquement pour la logique de panier et le checkout.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p class="font-semibold text-white">Hydratation sélective</p>
+          <p class="text-sm leading-relaxed text-gray-400">Catalogue, panier et checkout utilisent des directives client adaptées à leur usage : visible, load, idle.</p>
+        </div>
+        <div class="space-y-4">
+          <p class="font-semibold text-white">Cross-islands state</p>
+          <p class="text-sm leading-relaxed text-gray-400">Le panier persistant utilise nanostores et localStorage pour synchroniser l'état entre les îlots.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <CartDrawer />
+  <Footer />
+</Layout>
