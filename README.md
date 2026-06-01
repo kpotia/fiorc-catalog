@@ -1,20 +1,55 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+npm # Template WhatsApp E-commerce
 
-# Run and deploy your AI Studio app
+A lightweight React + Vite storefront template with a persistent cart and WhatsApp checkout integration.
 
-This contains everything you need to run your app locally.
+> Note: this repository currently uses Vite and React for local development.
 
-View your app in AI Studio: https://ai.studio/apps/b9c6e0aa-9f85-4f8a-a141-0d578b04e757
+## Prerequisites
 
-## Run Locally
+- Node.js 18+ recommended
+- npm 10+ or compatible package manager
 
-**Prerequisites:**  Node.js
+## Install dependencies
 
+```bash
+npm install
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Run locally
+
+```bash
+npm run dev
+```
+
+Then open the URL shown in your terminal, typically `http://localhost:3000`.
+
+## Build for production
+
+```bash
+npm run build
+```
+
+## Preview production build
+
+```bash
+npm run preview
+```
+
+## Available scripts
+
+- `npm run dev` &mdash; start the development server
+- `npm run build` &mdash; build the app for production
+- `npm run preview` &mdash; preview the production build locally
+- `npm run clean` &mdash; remove generated `dist` and `server.js`
+- `npm run lint` &mdash; run TypeScript type checking
+
+## Project structure
+
+- `src/` &mdash; application source files
+- `src/components/` &mdash; reusable UI components
+- `src/pages/` &mdash; page entrypoints (Astro or page-level components)
+- `src/types.ts` &mdash; shared TypeScript types
+
+## Notes
+
+- If you want to migrate this repository to a full Astro template, the current codebase will need an Astro config and Astro package dependencies.
