@@ -5,7 +5,7 @@ import Footer from '../../components/Footer.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import CartButton from '../../components/CartButton.astro';
 import CartDrawer from '../../components/CartDrawer.astro';
-import productPageClientScript from '../../components/product-page-client.ts?url';
+import ProductPageClientLoader from '../../components/ProductPageClientLoader.tsx';
 import { fetchProducts, activeProducts, getProductById } from '../../server/products';
 import { formatPrice, buildWhatsAppUrl } from '../../utils';
 
@@ -129,6 +129,6 @@ const related = activeProducts(products).filter((item) => item.id !== product.id
   </main>
 
   <CartDrawer />
+  <ProductPageClientLoader client:load />
   <Footer />
-  <script type="module" src={productPageClientScript}></script>
 </Layout>

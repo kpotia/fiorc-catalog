@@ -1,6 +1,6 @@
 ---
 import WhatsAppCheckout from './WhatsAppCheckout.astro';
-import cartClientScript from './cart-client.ts?url';
+import CartClientLoader from './CartClientLoader.tsx';
 ---
 <div data-cart-drawer class="fixed inset-0 z-50 overflow-hidden transition-all duration-300 invisible pointer-events-none" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
   <div
@@ -71,4 +71,4 @@ import cartClientScript from './cart-client.ts?url';
   </div>
 </div>
 
-<script type="module" src={cartClientScript}></script>
+<CartClientLoader client:load />
