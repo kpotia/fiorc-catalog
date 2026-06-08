@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": "91ba0be2",
+      "name": "Test ",
+      "price": 5000,
+      "category": "V?tements et Mode",
+      "description": "Description ",
+      "image": "https://res.cloudinary.com/dmuzp2yad/image/upload/v1780962860/Fiorc/test--1780962857485.png",
+      "stock": 5,
+      "status": "active",
+      "createdAt": "2026-06-08T23:54:20.663Z"
+    }
+  ],
+  "lastUpdated": "2026-06-08T23:54:20.812Z"
+}
