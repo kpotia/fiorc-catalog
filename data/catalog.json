@@ -10,7 +10,31 @@
       "stock": 5,
       "status": "active",
       "createdAt": "2026-06-08T23:54:20.663Z"
+    },
+    {
+      "id": "9a7b776c",
+      "name": "Test deux",
+      "price": 5000,
+      "category": "Vêtements et Mode",
+      "description": "Description ",
+      "image": "https://res.cloudinary.com/dmuzp2yad/image/upload/v1780990818/Fiorc/test-deux--1780990815.png",
+      "stock": 5,
+      "status": "active",
+      "createdAt": "2026-06-09T07:40:18.879Z",
+      "sourceEmail": "patrickamtepe@gmail.com"
+    },
+    {
+      "id": "dd55f17e",
+      "name": "Test trois",
+      "price": 25000,
+      "category": "Électronique",
+      "description": "Test encore ",
+      "image": "https://res.cloudinary.com/dmuzp2yad/image/upload/v1780990823/Fiorc/test-trois--1780990819.png",
+      "stock": 10,
+      "status": "active",
+      "createdAt": "2026-06-09T07:40:24.649Z",
+      "sourceEmail": "patrickamtepe@gmail.com"
     }
   ],
-  "lastUpdated": "2026-06-08T23:54:20.812Z"
+  "lastUpdated": "2026-06-09T07:40:24.654Z"
 }
