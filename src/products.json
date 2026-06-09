@@ -98,7 +98,19 @@
       "stock": 10,
       "status": "active",
       "createdAt": "2026-06-09T00:01:21.199Z"
+    },
+    {
+      "id": "1a38cda6",
+      "name": "Test trois",
+      "price": 25000,
+      "category": "Électronique",
+      "description": "Test encore ",
+      "image": "https://res.cloudinary.com/dmuzp2yad/image/upload/v1780991270/Fiorc/test-trois--1780991266.png",
+      "stock": 10,
+      "status": "active",
+      "createdAt": "2026-06-09T07:47:51.578Z",
+      "sourceEmail": "patrickamtepe@gmail.com"
     }
   ],
-  "lastUpdated": "2026-06-09T00:01:21.453Z"
+  "lastUpdated": "2026-06-09T07:47:51.583Z"
 }
